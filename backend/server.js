@@ -8,11 +8,19 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const connectMongoDb=require("./db/connectMongoDb.js")
 dotenv.config();
+// const corsOptions = {
+//     origin: ['http://localhost:5173',"https://moviex-w641.vercel.app"] ,
+//     credentials: true,
+// };
+// app.use(cors(corsOptions));
 const corsOptions = {
-    origin: ['http://localhost:5173',"https://moviex-w641.vercel.app"] ,
+    origin: ["http://localhost:5173"], // Replace with your actual frontend domain
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allow only required HTTP methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Restrict headers
 };
 app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(cookieParser());
 
