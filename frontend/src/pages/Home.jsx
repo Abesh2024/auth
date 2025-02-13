@@ -11,7 +11,7 @@ const App = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const res = await fetch(`http://localhost:10000/api/auth/me`, {
+        const res = await fetch(`https://auth-utgw.onrender.com/api/auth/me`, {
           credentials: "include",
          
         });

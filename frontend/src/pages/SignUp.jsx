@@ -25,7 +25,7 @@ const SignUpPage = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:10000/api/auth/signup",
+        "https://auth-utgw.onrender.com/api/auth/signup",
         formData,
         {
           headers: {
