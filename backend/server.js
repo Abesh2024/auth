@@ -14,10 +14,9 @@ dotenv.config();
 // };
 // app.use(cors(corsOptions));
 const corsOptions = {
-    origin: ["http://localhost:5173, https://auth-olive-eight.vercel.app"], // Replace with your actual frontend domain
+    origin:  "https://auth-olive-eight.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow only required HTTP methods
-    allowedHeaders: ["Content-Type", "Authorization"], // Restrict headers
 };
 app.use(cors(corsOptions));
 
